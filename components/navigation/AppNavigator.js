@@ -3,15 +3,18 @@ import {NavigationContainer} from "@react-navigation/native";
 import {createStackNavigator} from "@react-navigation/stack";
 import {createDrawerNavigator} from "@react-navigation/drawer";
 
-import HomeScreen from "../../screens/HomeScreen";
-import LabelsScreen from "../../screens/LabelsScreen";
-import TrashScreen from "../../screens/TrashScreen";
-import FoldersScreen from "../../screens/FoldersScreen";
+import HomeScreen from "../../screens/NotesAndLabels/HomeScreen";
+import LabelsScreen from "../../screens/NotesAndLabels/LabelsScreen";
+import TrashScreen from "../../screens/NotesAndLabels/TrashScreen";
+import FoldersScreen from "../../screens/Folders/FoldersScreen";
 
-import EditNoteScreen from "../../screens/EditNoteScreen";
-import NewNoteScreen from "../../screens/NewNoteScreen";
-import ManageLabelsScreen from "../../screens/ManageLabelsScreen";
-import FolderNotesScreen from "../../screens/FolderNotesScreen";
+import EditNoteScreen from "../../screens/NotesAndLabels/EditNoteScreen";
+import NewNoteScreen from "../../screens/NotesAndLabels/NewNoteScreen";
+import ManageLabelsScreen from "../../screens/NotesAndLabels/ManageLabelsScreen";
+
+import FolderNotesScreen from "../../screens/Folders/FolderNotesScreen";
+import NewFolderScreen from "../../screens/Folders/NewFolderScreen";
+import NewNoteInFolderScreen from "../../screens/Folders/NewNoteInFolderScreen";
 
 import { Ionicons } from '@expo/vector-icons';
 
@@ -41,6 +44,8 @@ function MainDrawerNavigator() {
         <Stack.Screen name="EditNote" component={EditNoteScreen} />
         <Stack.Screen name="ManageLabels" component={ManageLabelsScreen} />
         <Stack.Screen name="FolderNotes" component={FolderNotesScreen} />
+        <Stack.Screen name="NewFolder" component={NewFolderScreen} />
+        <Stack.Screen name="NewNoteInFolder" component={NewNoteInFolderScreen} />
       </Stack.Navigator>
     );
   }
